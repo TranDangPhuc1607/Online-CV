@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online CV - John Doe</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="./index.css" />
+    <!-- Google Fonts (Optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="navbar-brand">John Doe</div>
+        <ul class="navbar-nav">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>John Doe</h1>
+            <p class="hero-subtitle">Full-Stack Web Developer</p>
+            <a href="#contact" class="btn-primary">Get in Touch</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <div class="section-content">
+            <p>
+                I am a passionate and dedicated web developer with experience in creating dynamic and responsive
+                websites. My expertise lies in both front-end and back-end development, ensuring seamless user
+                experiences and robust functionality.
+            </p>
+            <p>
+                I'm always eager to learn new technologies and collaborate with teams to develop innovative solutions
+                that make a real impact.
+            </p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt-bg">
+        <h2>Experience</h2>
+        <div class="experience-item">
+            <h3>Lead Web Developer <span>@ Tech Solutions</span></h3>
+            <p class="experience-duration">Jan 2020 - Present</p>
+            <ul>
+                <li>Led a team of developers to build scalable web applications.</li>
+                <li>Implemented Agile methodologies to streamline development.</li>
+                <li>Collaborated with stakeholders to define project requirements.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <h3>Front-End Developer <span>@ Web Agency</span></h3>
+            <p class="experience-duration">Jun 2017 - Dec 2019</p>
+            <ul>
+                <li>Developed responsive layouts using HTML, CSS, and JavaScript.</li>
+                <li>Optimized user interfaces for better performance and usability.</li>
+                <li>Worked closely with designers to maintain brand consistency.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <div class="education-item">
+            <h3>B.Sc. in Computer Science <span>@ ABC University</span></h3>
+            <p class="education-duration">2013 - 2017</p>
+            <p>Graduated with honors. Focused on software development and systems engineering.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-alt-bg">
+        <h2>Skills</h2>
+        <div class="skills-container">
+            <div class="skill-bar">
+                <div class="skill-info">
+                    <span>HTML / CSS</span>
+                    <span class="skill-percentage">90%</span>
+                </div>
+                <div class="progress-line htmlcss"><span></span></div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-info">
+                    <span>JavaScript</span>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                <div class="progress-line javascript"><span></span></div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-info">
+                    <span>React / Vue</span>
+                    <span class="skill-percentage">75%</span>
+                </div>
+                <div class="progress-line reactvue"><span></span></div>
+            </div>
+            <div class="skill-bar">
+                <div class="skill-info">
+                    <span>Node.js</span>
+                    <span class="skill-percentage">85%</span>
+                </div>
+                <div class="progress-line nodejs"><span></span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>
+                    Feel free to reach out if you have any opportunities or just want to connect!
+                </p>
+                <p>Email: <a href="mailto:john.doe@example.com">john.doe@example.com</a></p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <form class="contact-form" onsubmit="return handleSubmit(event)">
+                <label for="name">Name</label>
+                <input type="text" id="name" required />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" required />
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" required></textarea>
+
+                <button type="submit" class="btn-primary">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Back to Top Button -->
+    <button id="btn-back-to-top" title="Back to Top">&#8679;</button>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 John Doe. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to External JS -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
