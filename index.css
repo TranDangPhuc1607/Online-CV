@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* Fonts */
+/* Fonts & Body */
 body {
     font-family: 'Open Sans', sans-serif;
     color: #2c3e50;
@@ -23,7 +23,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 9999;
-    /* Ensure navbar stays on top */
 }
 
 .navbar-brand {
@@ -33,7 +32,6 @@ body {
     color: #fff;
 }
 
-/* Hamburger Icon (hidden by default, shown on mobile) */
 .menu-icon {
     display: none;
     cursor: pointer;
@@ -48,7 +46,6 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-/* Navbar Links */
 .navbar-nav {
     display: flex;
     list-style: none;
@@ -69,7 +66,7 @@ body {
     color: #3498db;
 }
 
-/* Show nav links when the nav-links has the "active" class (for mobile) */
+/* Show nav links (mobile) */
 .navbar-nav.active {
     display: flex;
 }
@@ -104,6 +101,7 @@ body {
     font-weight: 600;
     transition: background-color 0.3s ease;
     cursor: pointer;
+    text-transform: none;
 }
 
 .btn-primary:hover {
@@ -136,7 +134,7 @@ body {
     background-color: #fff;
 }
 
-/* Experience and Education items */
+/* Experience and Education */
 .experience-item,
 .education-item {
     margin-bottom: 2rem;
@@ -184,6 +182,7 @@ body {
     font-weight: 600;
 }
 
+/* The grey background track */
 .progress-line {
     background: #bdc3c7;
     width: 100%;
@@ -193,27 +192,17 @@ body {
     position: relative;
 }
 
+/* The colored fill. 
+     We start width at 0% and update to final percentage with JS. */
 .progress-line span {
     display: block;
     height: 100%;
     border-radius: 4px;
-    width: 0;
-    /* Will be set by JS */
-    animation: fillBar 2s ease-in-out forwards;
+    width: 0%;
+    transition: width 1.8s ease-in-out;
 }
 
-@keyframes fillBar {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: inherit;
-        /* Overridden by JS to final width */
-    }
-}
-
-/* Contact Section */
+/* Contact */
 .contact-container {
     display: flex;
     flex-wrap: wrap;
@@ -232,6 +221,7 @@ body {
     min-width: 300px;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
 }
 
 .contact-form label {
@@ -263,10 +253,9 @@ body {
     padding: 1rem;
 }
 
-/* Back to Top Button */
+/* Back to Top */
 #btn-back-to-top {
     display: none;
-    /* Hidden by default */
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -286,12 +275,8 @@ body {
     background-color: #2980b9;
 }
 
-/* =============================== */
-/* =  MEDIA QUERIES FOR MOBILE  = */
-/* =============================== */
+/* Responsive (Mobile) */
 @media (max-width: 768px) {
-
-    /* Hide nav links by default on mobile, show hamburger icon */
     .navbar-nav {
         display: none;
         flex-direction: column;
@@ -309,7 +294,6 @@ body {
         display: block;
     }
 
-    /* Reduce hero padding on smaller screens */
     .hero {
         padding: 3rem 1rem;
     }
@@ -322,7 +306,6 @@ body {
         font-size: 1.2rem;
     }
 
-    /* Make contact section stack vertically */
     .contact-container {
         flex-direction: column;
     }

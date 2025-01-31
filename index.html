@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online CV - Trần Đăng Phúc</title>
-    <!-- Link to External CSS -->
+    <title>Updated Skill Bars</title>
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="./index.css" />
 
     <!-- Google Fonts (Optional) -->
@@ -15,11 +16,11 @@
         href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Montserrat:wght@500;700&display=swap"
         rel="stylesheet" />
 
-    <!-- EmailJS SDK (Required for sending emails directly from the browser) -->
+    <!-- EmailJS SDK -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
-            // Initialize EmailJS with your public key (REPLACE "YOUR_PUBLIC_KEY")
+            // Initialize EmailJS with your public key (REPLACE "YOUR_PUBLIC_KEY" if needed)
             emailjs.init("YOUR_PUBLIC_KEY");
         })();
     </script>
@@ -28,15 +29,13 @@
 <body>
     <!-- Navigation (Sticky) -->
     <nav class="navbar">
-        <div class="navbar-brand">Trần Đăng Phúc</div>
-
-        <!-- Hamburger Icon (hidden on desktop, visible on mobile/tablet) -->
+        <div class="navbar-brand">My Portfolio</div>
+        <!-- Hamburger Icon (for mobile) -->
         <div class="menu-icon" id="mobile-menu" onclick="toggleMenu()">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </div>
-
         <ul class="navbar-nav" id="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -49,8 +48,8 @@
     <!-- Header / Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <h1>Trần Đăng Phúc</h1>
-            <p class="hero-subtitle">IT student</p>
+            <h1>John Doe</h1>
+            <p class="hero-subtitle">IT Student</p>
             <a href="#contact" class="btn-primary">Get in Touch</a>
         </div>
     </header>
@@ -60,16 +59,9 @@
         <h2>About Me</h2>
         <div class="section-content">
             <p>
-                I am a passionate and dedicated IT student with a strong desire to learn and grow in the field. I am
-                currently pursuing a Bachelor in IT at RMIT University and am eager to gain practical experience
-                through this internship opportunity.
-
-                I am confident that my enthusiasm, dedication, and eagerness to learn will make me a valuable asset to
-                your team.
-            </p>
-            <p>
-                I'm always eager to learn new technologies and collaborate with teams to
-                develop innovative solutions that make a real impact.
+                I am a passionate IT student dedicated to building my skillset in various
+                modern technologies. This portfolio page showcases my experience,
+                education, and abilities.
             </p>
         </div>
     </section>
@@ -78,21 +70,12 @@
     <section id="experience" class="section section-alt-bg">
         <h2>Experience</h2>
         <div class="experience-item">
-            <h3>Lead Web Developer <span>@ Tech Solutions</span></h3>
-            <p class="experience-duration">Jan 2020 - Present</p>
+            <h3>Teaching Assistant</h3>
+            <p class="experience-duration">2022 - Present</p>
             <ul>
-                <li>Led a team of developers to build scalable web applications.</li>
-                <li>Implemented Agile methodologies to streamline development.</li>
-                <li>Collaborated with stakeholders to define project requirements.</li>
-            </ul>
-        </div>
-        <div class="experience-item">
-            <h3>Front-End Developer <span>@ Web Agency</span></h3>
-            <p class="experience-duration">Jun 2017 - Dec 2019</p>
-            <ul>
-                <li>Developed responsive layouts using HTML, CSS, and JavaScript.</li>
-                <li>Optimized user interfaces for better performance and usability.</li>
-                <li>Worked closely with designers to maintain brand consistency.</li>
+                <li>Mentored new students on course material and best practices.</li>
+                <li>Conducted review sessions and lab demos.</li>
+                <li>Assisted in grading and providing feedback.</li>
             </ul>
         </div>
     </section>
@@ -103,9 +86,7 @@
         <div class="education-item">
             <h3>Bachelor in Information Technology (IT) <span>@ RMIT University</span></h3>
             <p class="education-duration">2023 - 2026</p>
-            <p>
-                Study in progress
-            </p>
+            <p>Currently pursuing a Bachelor’s degree in IT at RMIT University.</p>
         </div>
     </section>
 
@@ -113,38 +94,42 @@
     <section id="skills" class="section section-alt-bg">
         <h2>Skills</h2>
         <div class="skills-container">
-            <!-- Each skill-bar has a data-percentage and optional data-color -->
+            <!-- Each skill-bar has data-percentage and data-color -->
             <div class="skill-bar" data-percentage="90" data-color="#3498db">
                 <div class="skill-info">
-                    <span>HTML / CSS</span>
-                    <span class="skill-percentage">90%</span>
+                    <span>HTML / CSS / JS</span>
+                    <!-- The JS will update this percentage text automatically -->
+                    <span class="skill-percentage">0%</span>
                 </div>
                 <div class="progress-line">
                     <span></span>
                 </div>
             </div>
-            <div class="skill-bar" data-percentage="80" data-color="#e67e22">
+
+            <div class="skill-bar" data-percentage="10" data-color="#e67e22">
                 <div class="skill-info">
                     <span>JavaScript</span>
-                    <span class="skill-percentage">80%</span>
+                    <span class="skill-percentage">0%</span>
                 </div>
                 <div class="progress-line">
                     <span></span>
                 </div>
             </div>
+
             <div class="skill-bar" data-percentage="75" data-color="#9b59b6">
                 <div class="skill-info">
                     <span>React / Vue</span>
-                    <span class="skill-percentage">75%</span>
+                    <span class="skill-percentage">0%</span>
                 </div>
                 <div class="progress-line">
                     <span></span>
                 </div>
             </div>
-            <div class="skill-bar" data-percentage="85" data-color="#2ecc71">
+
+            <div class="skill-bar" data-percentage="18" data-color="#2ecc71">
                 <div class="skill-info">
                     <span>Node.js</span>
-                    <span class="skill-percentage">85%</span>
+                    <span class="skill-percentage">0%</span>
                 </div>
                 <div class="progress-line">
                     <span></span>
@@ -165,19 +150,10 @@
                 <p>Email: tdptrandangphuc.work1607@gmail.com</p>
                 <p>Phone: 0947 229 215</p>
             </div>
-            <!-- The form calls `sendEmail()` on submit -->
-            <form class="contact-form" onsubmit="return sendEmail(event)">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="from_name" required />
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="reply_to" required />
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
-                <button type="submit" class="btn-primary">Send</button>
-            </form>
+            <!-- Example direct link to a form -->
+            <a href="https://forms.gle/f6VziUYWqUGZAekR9" class="contact-form" target="_blank">
+                <button class="btn-primary">Send further questions</button>
+            </a>
         </div>
     </section>
 
@@ -186,10 +162,13 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>© 2025 Trần Đăng Phúc. All rights reserved.</p>
+        <p>Copyright &copy;
+            <script>document.write(new Date().getFullYear())</script>
+            © 2025 Trần Đăng Phúc. All rights reserved.
+        </p>
     </footer>
 
-    <!-- Link to External JS -->
+    <!-- External JS -->
     <script src="./index.js"></script>
 </body>
 

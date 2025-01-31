@@ -1,31 +1,32 @@
-// 1) Hamburger Menu Toggle
+// 1) Toggle Hamburger Menu (Mobile)
 function toggleMenu() {
     const navLinks = document.getElementById("nav-links");
     navLinks.classList.toggle("active");
 }
 
-// Close hamburger menu automatically when a user selects a link (on mobile)
+// Close hamburger menu automatically when link clicked (mobile)
 document.addEventListener("DOMContentLoaded", () => {
     // For skill bars
     const skillBars = document.querySelectorAll(".skill-bar");
     skillBars.forEach((bar) => {
-        // Read the percentage from the data attribute
-        const percentage = bar.getAttribute("data-percentage");
-        // Read the color from the data attribute (default to #3498db if none)
+        const percentage = bar.getAttribute("data-percentage");  // e.g. "90"
         const color = bar.getAttribute("data-color") || "#3498db";
-        // Get the progress-line span element
+
+        // Update the percentage text in .skill-percentage
+        const skillPercentageElem = bar.querySelector(".skill-percentage");
+        skillPercentageElem.textContent = percentage + "%";
+
+        // Update the progress-line span width & background color
         const progressLine = bar.querySelector(".progress-line span");
-        // Set the width & background color based on the data attributes
-        progressLine.style.width = percentage + "%";
         progressLine.style.backgroundColor = color;
+        progressLine.style.width = percentage + "%"; // triggers the CSS transition
     });
 
-    // Add click event to each link to close menu if currently active
+    // Close menu on link click if in mobile mode
     const navLinks = document.querySelectorAll("#nav-links li a");
     navLinks.forEach((link) => {
         link.addEventListener("click", () => {
             const navbarNav = document.getElementById("nav-links");
-            // Only close if we're in "mobile" mode (the nav is active)
             if (navbarNav.classList.contains("active")) {
                 toggleMenu();
             }
@@ -41,7 +42,10 @@ window.onscroll = function () {
 function scrollFunction() {
     const btn = document.getElementById("btn-back-to-top");
     // Show the button after scrolling 100px
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+    ) {
         btn.style.display = "block";
     } else {
         btn.style.display = "none";
@@ -53,7 +57,7 @@ document.getElementById("btn-back-to-top").addEventListener("click", function ()
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// 3) Handle the contact form submission using EmailJS
+// 3) Handle contact form submission using EmailJS (optional)
 function sendEmail(event) {
     event.preventDefault();
 
@@ -68,11 +72,11 @@ function sendEmail(event) {
         return false;
     }
 
-    // Prepare the template parameters for EmailJS
+    // Prepare template params
     const templateParams = {
         from_name: name,
         reply_to: email,
-        message: message
+        message: message,
     };
 
     // Replace with your actual Service ID, Template ID from EmailJS
@@ -85,15 +89,15 @@ function sendEmail(event) {
         .then(function (response) {
             alert("Your message has been sent successfully!");
             console.log("SUCCESS!", response.status, response.text);
-            // REDIRECT to YouTube after successful submission
-            window.location.href = "https://www.youtube.com";
+            // Optionally redirect somewhere
+            // window.location.href = "https://www.youtube.com";
         })
         .catch(function (error) {
             alert("Oops... " + JSON.stringify(error));
             console.error("FAILED...", error);
         });
 
-    // Reset form fields
+    // Reset form
     event.target.reset();
     return false;
 }
